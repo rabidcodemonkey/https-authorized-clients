@@ -104,6 +104,16 @@ certificate authority.
 
 If we get an "OK" when running each of those commands, we are all set.
 
+Import the Certificate
+======================
+
+For use on Windows.  You will need to convert the certificate to a Windows supported certificate.  For this example we will use PKCS21.
+
+    openssl pkcs12 -export -out client1-crt.p12 -in client1-crt.pem -inkey client1-key.pem
+
+The exported PKCS12 certificate can now be imported into the Chrome (or Firefox) Windows client.
+
+
 Run the Example
 ===============
 
@@ -169,7 +179,8 @@ our server.
 
 Author
 ======
-**Anders Brownworth**
+Original Author: **Anders Brownworth**
+Modifications: **Rabid Code Monkey**
 
 + [http://twitter.com/anders94](@anders94)
 + [http://github.com/anders94](github.com/anders94)
